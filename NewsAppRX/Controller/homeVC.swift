@@ -6,20 +6,20 @@
 //
 
 import UIKit
+import Combine
 
 class homeVC: UIViewController {
     
     @IBOutlet weak var newsTableView: UITableView!
     
-    private var posts = [
-        Post(title: "Checnking in on Vick", auhtor: "Berkat", url: "https://google.com"),
-        Post(title: "Walking to the ravens", auhtor: "Brandon", url: "https://nfl.com")
-    ]
+    private var posts = [Post]()
+    var service = NewsService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        service.delegate = self
+        service.getNewsData()
         newsTableView.register(UINib(nibName: K.tableCellsandXibs.newsCell, bundle: nil), forCellReuseIdentifier: K.tableCellsandXibs.newsCell)
     }
 
@@ -38,6 +38,17 @@ extension homeVC: UITableViewDelegate, UITableViewDataSource {
         guard let postCell = newsTableView.dequeueReusableCell(withIdentifier: K.tableCellsandXibs.newsCell, for: indexPath) as? newsPostCell else {return UITableViewCell()}
         postCell.updateCell(post: post)
         return postCell
+    }
+    
+    
+}
+
+extension homeVC: NewsDelegate {
+    func didReceiveNewsData(post: [Post]) {
+        DispatchQueue.main.async {
+            self.posts = post
+            self.newsTableView.reloadData()
+        }
     }
     
     

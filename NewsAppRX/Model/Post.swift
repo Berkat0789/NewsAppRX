@@ -10,8 +10,12 @@ import Foundation
 
 
 
-struct Post {
+struct Feed: Decodable {
+    let articles: [Post]
+}
+
+
+struct Post: Decodable {
     let title: String
-    let auhtor: String
-    let url: String
+    let author: String?
 }

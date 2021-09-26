@@ -20,7 +20,7 @@ class newsPostCell: UITableViewCell {
     
     
     func updateCell(post: Post) {
-        self.authorTextField.text = post.auhtor
+        self.authorTextField.text = post.author
         self.postTitleLabel.text = post.title
     }
 
