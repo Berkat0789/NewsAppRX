@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		F0209CD627012160008730EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0209CD527012160008730EF /* AppDelegate.swift */; };
 		F0209CD827012160008730EF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0209CD727012160008730EF /* SceneDelegate.swift */; };
-		F0209CDA27012160008730EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0209CD927012160008730EF /* ViewController.swift */; };
+		F0209CDA27012160008730EF /* homeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0209CD927012160008730EF /* homeVC.swift */; };
 		F0209CDD27012160008730EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0209CDB27012160008730EF /* Main.storyboard */; };
 		F0209CDF27012163008730EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0209CDE27012163008730EF /* Assets.xcassets */; };
 		F0209CE227012163008730EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0209CE027012163008730EF /* LaunchScreen.storyboard */; };
+		F0209CEF270123D5008730EF /* newsPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0209CED270123D5008730EF /* newsPostCell.swift */; };
+		F0209CF0270123D5008730EF /* newsPostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0209CEE270123D5008730EF /* newsPostCell.xib */; };
+		F0209CF2270123E8008730EF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0209CF1270123E8008730EF /* Constants.swift */; };
+		F0209CF42701252D008730EF /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0209CF32701252D008730EF /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F0209CD227012160008730EF /* NewsAppRX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsAppRX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0209CD527012160008730EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0209CD727012160008730EF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F0209CD927012160008730EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F0209CD927012160008730EF /* homeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeVC.swift; sourceTree = "<group>"; };
 		F0209CDC27012160008730EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F0209CDE27012163008730EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0209CE127012163008730EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F0209CE327012163008730EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0209CED270123D5008730EF /* newsPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newsPostCell.swift; sourceTree = "<group>"; };
+		F0209CEE270123D5008730EF /* newsPostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = newsPostCell.xib; sourceTree = "<group>"; };
+		F0209CF1270123E8008730EF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F0209CF32701252D008730EF /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,51 @@
 		F0209CD427012160008730EF /* NewsAppRX */ = {
 			isa = PBXGroup;
 			children = (
+				F0209CEC270121FE008730EF /* Service */,
+				F0209CEB270121F9008730EF /* Controller */,
+				F0209CEA270121F1008730EF /* View */,
+				F0209CE9270121EC008730EF /* Model */,
 				F0209CD527012160008730EF /* AppDelegate.swift */,
 				F0209CD727012160008730EF /* SceneDelegate.swift */,
-				F0209CD927012160008730EF /* ViewController.swift */,
-				F0209CDB27012160008730EF /* Main.storyboard */,
 				F0209CDE27012163008730EF /* Assets.xcassets */,
 				F0209CE027012163008730EF /* LaunchScreen.storyboard */,
 				F0209CE327012163008730EF /* Info.plist */,
+				F0209CF1270123E8008730EF /* Constants.swift */,
 			);
 			path = NewsAppRX;
+			sourceTree = "<group>";
+		};
+		F0209CE9270121EC008730EF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F0209CF32701252D008730EF /* Post.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F0209CEA270121F1008730EF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F0209CDB27012160008730EF /* Main.storyboard */,
+				F0209CED270123D5008730EF /* newsPostCell.swift */,
+				F0209CEE270123D5008730EF /* newsPostCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F0209CEB270121F9008730EF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F0209CD927012160008730EF /* homeVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F0209CEC270121FE008730EF /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +168,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0209CF0270123D5008730EF /* newsPostCell.xib in Resources */,
 				F0209CE227012163008730EF /* LaunchScreen.storyboard in Resources */,
 				F0209CDF27012163008730EF /* Assets.xcassets in Resources */,
 				F0209CDD27012160008730EF /* Main.storyboard in Resources */,
@@ -137,7 +182,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0209CDA27012160008730EF /* ViewController.swift in Sources */,
+				F0209CF2270123E8008730EF /* Constants.swift in Sources */,
+				F0209CEF270123D5008730EF /* newsPostCell.swift in Sources */,
+				F0209CDA27012160008730EF /* homeVC.swift in Sources */,
+				F0209CF42701252D008730EF /* Post.swift in Sources */,
 				F0209CD627012160008730EF /* AppDelegate.swift in Sources */,
 				F0209CD827012160008730EF /* SceneDelegate.swift in Sources */,
 			);
